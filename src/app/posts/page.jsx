@@ -12,7 +12,7 @@ const PostPage = async () => {
         {posts.map(post => (
           <div
             key={post.id}
-            className='card w-96 bg-base-100 card-md shadow-sm'
+            className='card bg-base-100 card-md shadow-sm'
           >
             <div className='card-body'>
               <h2 className='card-title'>{post.title}</h2>

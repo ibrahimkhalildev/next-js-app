@@ -28,6 +28,9 @@ const NavBar = () => {
       <li>
         <Link href='/posts'>Post Page</Link>
       </li>
+      <li>
+        <Link href='/comments'>Comments</Link>
+      </li>
     </>
   )
   return (
