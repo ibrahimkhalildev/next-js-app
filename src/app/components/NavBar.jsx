@@ -1,35 +1,85 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 const NavBar = () => {
+  const pathname = usePathname()
+  console.log('the current path is', pathname)
   const links = (
     <>
       <li>
-        <Link href='/docs'>Docs</Link>
+        <Link
+          className={pathname === '/docs' ? 'text-blue-500' : ''}
+          href='/docs'
+        >
+          Docs
+        </Link>
       </li>
       <li>
-        <Link href='/about'>About</Link>
+        <Link
+          className={pathname === '/about' ? 'text-blue-500' : ''}
+          href='/about'
+        >
+          About
+        </Link>
       </li>
       <li>
-        <Link href='/about/developers'>Developers</Link>
+        <Link
+          href='/about/developers'
+          className={pathname === '/about/developers' ? 'text-blue-500' : ''}
+        >
+          Developers
+        </Link>
       </li>
       <li>
-        <Link href='/about/designer'>Designer</Link>
+        <Link
+          className={pathname === '/about/designer' ? 'text-blue-500' : ''}
+          href='/about/designer'
+        >
+          Designer
+        </Link>
       </li>
       <li>
-        <Link href='/blogs'>Blogs</Link>
+        <Link
+          className={pathname === '/blogs' ? 'text-blue-500' : ''}
+          href='/blogs'
+        >
+          Blogs
+        </Link>
       </li>
       <li>
-        <Link href='/dashboard'>Dashboard</Link>
+        <Link
+          className={pathname === '/dashboard' ? 'text-blue-500' : ''}
+          href='/dashboard'
+        >
+          Dashboard
+        </Link>
       </li>
       <li>
-        <Link href='/users'>Users</Link>
+        <Link
+          className={pathname === '/users' ? 'text-blue-500' : ''}
+          href='/users'
+        >
+          Users
+        </Link>
       </li>
       <li>
-        <Link href='/posts'>Post Page</Link>
+        <Link
+          className={pathname === '/posts' ? 'text-blue-500' : ''}
+          href='/posts'
+        >
+          Post Page
+        </Link>
       </li>
       <li>
-        <Link href='/comments'>Comments</Link>
+        <Link
+          className={pathname === '/comments' ? 'text-blue-500' : ''}
+          href='/comments'
+        >
+          Comments
+        </Link>
       </li>
     </>
   )
@@ -62,7 +112,7 @@ const NavBar = () => {
             {links}
           </ul>
         </div>
-        <a className='btn btn-ghost text-xl'>daisyUI</a>
+        <a className='btn btn-ghost text-xl'>UpperCodes IT Solution</a>
       </div>
       <div className='navbar-center hidden lg:flex'>
         <ul className='menu menu-horizontal px-1'>{links}</ul>
